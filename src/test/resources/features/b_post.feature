@@ -1,7 +1,7 @@
 Feature: Post Pet
 
 	@smokeTest
-	Scenario:  Add new pet
+Scenario:  Add new pet
     Given headers
   	| accept 	        | application/json |
   	| Content-Type 	  | application/json |

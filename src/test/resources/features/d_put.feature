@@ -1,7 +1,7 @@
 Feature: Update pet
 
-	@smokeTest
-  Scenario: 
+@smokeTest
+Scenario: 
     Given headers
   	| accept 	        | application/json |
   	| Content-Type 	  | application/json |
