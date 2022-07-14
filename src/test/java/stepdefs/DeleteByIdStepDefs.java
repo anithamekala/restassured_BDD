@@ -1,7 +1,6 @@
 package stepdefs;
 
 import static constants.TestConstants.KEY_ID;
-import static constants.TestConstants.KEY_NAME;
 import static constants.TestConstants.KEY_STATUS_CODE;
 import static constants.TestConstants.KEY_STATUS_LINE;
 import static constants.TestConstants.URI;

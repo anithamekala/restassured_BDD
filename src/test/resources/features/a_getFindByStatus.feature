@@ -1,33 +1,11 @@
 Feature: Get findByStatus
-  
-  @smokeTest
-  Scenario: Call findBystatus rest endpoint to get all available statuses
-   	Given query param as
-  	| status 	  | available |
+@test
+Scenario Outline: Call findBystatus rest endpoint to get all statuses
+	  Given query param as "<status>"
 	  When get findByStatus
-	  And response for findByStatus contains
-	  | statusCode	  | 200							|
-		| statusLine    | HTTP/1.1 200 OK	|
-		| status			  | available			  |
-    	
-  @smokeTest
-  Scenario: Call findBystatus rest endpoint to get all pending statuses
-	  Given query param as
-	    | status 	  | pending |
-	  When get findByStatus
-	  And response for findByStatus contains
-	  | statusCode	  | 200							|
-		| statusLine    | HTTP/1.1 200 OK	|
-	  | status 	      | pending         |
-    	
-  @smokeTest
-  Scenario: Call findBystatus rest endpoint to get all sold statuses
-  	Given query param as
-  	  | status 	  | sold |
-    When get findByStatus
-    And response for findByStatus contains
-    	| statusCode	  | 200							|
-			| statusLine    | HTTP/1.1 200 OK	|
-      | status 	      | sold            |  
- 
- 
+	  And response contains "<statusCode>", "<statusLine>" and "<status>"
+Examples: 
+	  |statusCode	|statusLine       |status    |
+	  |200        |HTTP/1.1 200 OK  |available |
+	  |200				|HTTP/1.1 200 OK	|pending   |
+	  |200				|HTTP/1.1 200 OK	|sold			 |

@@ -37,7 +37,7 @@ public class PostStepDefs {
 	}
 
     @Then("response contains$")
-	public void query_param_as(Map<String, String> map) {
+	public void response_contains(Map<String, String> map) {
     	assertEquals(sh.response.getStatusCode(), Integer.parseInt(map.get(KEY_STATUS_CODE)));
 		assertEquals(sh.response.getStatusLine(), map.get(KEY_STATUS_LINE));
 
