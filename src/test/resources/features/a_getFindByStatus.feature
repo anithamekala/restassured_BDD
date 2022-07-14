@@ -1,5 +1,5 @@
 Feature: Get findByStatus
-@test
+@smokeTest
 Scenario Outline: Call findBystatus rest endpoint to get all statuses
 	  Given query param as "<status>"
 	  When get findByStatus

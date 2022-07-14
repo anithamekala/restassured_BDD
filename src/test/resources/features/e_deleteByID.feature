@@ -1,7 +1,7 @@
 Feature: Get pet by ID
 
-	@smokeTest
-  Scenario: findByID
+@smokeTest
+Scenario: findByID
    Given headers
   	| accept 	        | application/json |
   	| Content-Type 	  | application/json |
